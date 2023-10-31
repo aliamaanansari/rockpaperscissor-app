@@ -8,7 +8,9 @@ body{
 .main-heading{
     color: white;
     padding-top: 2px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
+    font-size: 60px;
+
 }
 .wrapper{
     color:white;
@@ -25,8 +27,8 @@ body{
     gap: 20px;
 }
 button{
-    height: 60px;
-    width: 70px;
+    height: 170px;
+    width: 180px;
     font-size: 48px;
     border-radius: 30px;
     cursor: pointer;
