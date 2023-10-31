@@ -1,4 +1,4 @@
-const totalScores = { computerScore: 0, playerScore: 0 };
+const totalScore = { computerScore: 0, playerScore: 0 };
 
 function getComputerChoice() {
   const rpsChoice = ["Rock", "Paper", "Scissors"];
@@ -26,9 +26,18 @@ function getResult(playerChoice, computerChoice) {
 
 // ** showResult updates the DOM to `You Win!` or `You Lose!` or `It's a Draw!` based on the score. Also shows Player Choice vs. Computer Choice**
 function showResult(score, playerChoice, computerChoice) {
-  // Hint: on a score of -1
-  // You should do result.innerText = 'You Lose!'
-  // Don't forget to grab the div with the 'result' id!
+  const resultDiv = document.getElementById("result");
+  const handsDiv = document.getElementById("hands");
+  const playerScoreDiv = document.getElementById("player-score");
+  if (score == -1) {
+    resultDiv.innerHTML = "You Lose!!!!!! ";
+  } else if (score == 0) {
+    resultDiv.innerHTML = "Its a tie!!!!!";
+  } else {
+    resultDiv.innerHTML = "You Won!!!!!!!!";
+  }
+  handsDiv.innerText = `Player = ${playerChoice} vs Computer = ${computerChoice}`;
+  playerScoreDiv.innerText = `Your Score: ${totalScore["playerScore"]}`;
 }
 
 // ** Calculate who won and show it on the screen **
@@ -38,8 +47,9 @@ function onClickRPS(playerChoice) {
 
   console.log({ computerChoice });
   const score = getResult(playerChoice, computerChoice);
-  totalScores["playerScore"] += score;
+  totalScore["playerScore"] += score;
   console.log({ score });
+  showResult(score, playerChoice, computerChoice);
 }
 
 // ** Make the RPS buttons actively listen for a click and do something once a click is detected **
