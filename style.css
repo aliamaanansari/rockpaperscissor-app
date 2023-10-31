@@ -5,6 +5,11 @@ body{
     margin: 0;
     background: #1c1c1c;
 }
+.main-heading{
+    color: white;
+    padding-top: 2px;
+    padding-bottom: 20px;
+}
 .wrapper{
     color:white;
     display: flex;
