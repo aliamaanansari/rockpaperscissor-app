@@ -3,7 +3,7 @@ body{
     width: 100%;
     padding: 0;
     margin: 0;
-
+    background: #1c1c1c;
 }
 .wrapper{
     background: #1c1c1c;
@@ -21,8 +21,8 @@ body{
     gap: 20px;
 }
 button{
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 70px;
     font-size: 48px;
     border-radius: 30px;
     cursor: pointer;
